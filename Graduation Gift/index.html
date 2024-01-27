@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="rxWorld">
+
+        <section class="rnOuter ">
+               
+          <section class="aoTable">
+            <div class="aoTableCell">
+                <h1>vertical & horizontal centering with display:table</h1>
+                <p>With connected subline</p>
+            </div>
+        </section>
+            
+            <div class='rnInner'>
+                <div class='rnUnit'></div><!--
+                --><div class='rnUnit'></div><!--
+                --><div class='rnUnit'></div><!--
+                --><div class='rnUnit'></div><!--
+                --><div class='rnUnit'></div><!--
+                --><div class='rnUnit'></div><!--
+                --><div class='rnUnit'></div><!--
+                --><div class='rnUnit'></div><!--
+                --><div class='rnUnit'></div><!--
+                --><div class='rnUnit'></div><!--
+                -->
+            </div>
+        </section>
+            
+             
+        </div>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+              // Get all elements with class "rnOuter"
+              var rnOuterElements = document.querySelectorAll('.rnOuter');
+          
+              // Add a click event listener to each "rnOuter" element
+              rnOuterElements.forEach(function (element) {
+                element.addEventListener('click', function () {
+                  // Toggle the "clicked" class on the clicked element
+                  element.classList.toggle('clicked');
+                });
+              });
+            });
+          </script>
+</body>
+</html>
