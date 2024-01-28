@@ -1,112 +1,74 @@
-.body{
-    padding: 0;
+html{
+  padding: 0;
+  margin: 0;
 }
 
-:root {
-    --accent: hsl(360, 80%, 50%);
-  }
+body{
+  margin: 0;
+}
+.curtain {
+  width: 100%; /* Ensures the component is the full screen width */
+  height: 99vh; /* We're using this for demo purposes */
+  overflow: hidden; /* Allows us to slide the panels outside the container without them showing */
+}
   
-  .rnOuter {
-    background: hsl(360, 80%, 38%); /* Darken(@accent, 12%) */
-    overflow: hidden;
-    position: relative;
-    height: 100vh;
-  }
-  
-  .rnInner {
-    width: 100%;
-    position: absolute;
-    top: -10%;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    margin: auto;
-    transform-style: preserve-3d;
-    transition: transform 6s ease;
-    transform-origin: -120% top;
-  }
-  
-  .rnUnit {
-    width: 10vw;
-    height: 120vh;
-    background: repeating-linear-gradient(
-      to left,
-      hsl(360, 80%, 50%) 4vw, /* @accent */
-      hsl(360, 80%, 30%) 8vw, /* Darken(@accent, 20%) */
-      hsl(360, 80%, 70%) 10vw /* Lighten(@accent, 20%) */
-    );
-    background-size: 100% 100%;
-    display: inline-block;
-    transform-origin: 0 0%;
-    transform: rotate(3deg);
-    animation: rnUnit 2s ease infinite;
-  }
-  
-  @keyframes rnUnit {
-    50% {
-      transform: rotate(-3deg);
-    }
-  }
-  
-  .rnUnit:nth-child(1) {
-    animation-delay: -0.1s;
-  }
-  
-  .rnUnit:nth-child(2) {
-    animation-delay: -0.2s;
-  }
-  
-  .rnUnit:nth-child(3) {
-    animation-delay: -0.3s;
-  }
-  
-  .rnUnit:nth-child(4) {
-    animation-delay: -0.4s;
-  }
-  
-  .rnUnit:nth-child(5) {
-    animation-delay: -0.5s;
-  }
-  
-  .rnUnit:nth-child(6) {
-    animation-delay: -0.6s;
-  }
-  
-  .rnUnit:nth-child(7) {
-    animation-delay: -0.7s;
-  }
-  
-  .rnUnit:nth-child(8) {
-    animation-delay: -0.8s;
-  }
-  
-  .rnUnit:nth-child(9) {
-    animation-delay: -0.9s;
-  }
-  
-  .rnUnit:nth-child(10) {
-    animation-delay: -1s;
-  }
-  
-  .aoTable {
-    display: table;
-    width: 100%;
-    height: 100vh;
-    text-align: center;
-  }
-  
-  .aoTableCell {
-    color: hsl(360, 80%, 38%); /* Darken(@accent, 12%) */
-    display: table-cell;
-    vertical-align: middle;
-    transition: color 3s ease;
-  }
-  
-  .clicked .rnInner {
-    transform-origin: -120% top;
-    transform: scaleX(0);
-  }
+.curtain__wrapper {
+  width: 100%;
+  height: 100%;
+}
+      
+.curtain__panel {
+  background: orange;
+  width: 50%; /* Each panel takes up half the container */
+  height: 100vh; /* Used for demo purposes */
+  float: left; /* Makes sure panels are side-by-side */
+  position: relative; /* Needed to define the z-index */
+  z-index: 2; /* Places the panels in front of the prize */
+  transition: all 1s ease-out; /* Animates the sliding transition */
+}
 
-  .clicked .aoTableCell {
-    color: white;
-  }
+.curtain__panel--left {
+  transform: translateX(-100%);
+  background-image: url('https://i.pinimg.com/564x/21/39/51/213951e3b39281264e8b02dea7013925.jpg');
+  background-size: cover; /* Adjust as needed */
+
+}
+
+.curtain__panel--right {
+  transform: translateX(100%);
+  background-image: url('https://i.pinimg.com/564x/21/39/51/213951e3b39281264e8b02dea7013925.jpg');
+  background-size: cover; /* Adjust as needed */
+
+}
+  
+.curtain__prize {
+  position: absolute; /* Forces the prize position into the container start */
+  z-index: 1; /* Places the prize behind the panels, which are z-index 2 */
+  width: 100%;
+  height: 100%;
+  background-image: url("https://i.bandori.party/u/asset/9i5M0ISchool-stage-ioOo0v.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat; /* Prevent repeating the background image */
+  background-position: center; /* Center the background image */
+}
+
+input[type=checkbox] {
+  position: absolute; /* Force the checkbox at the start of the container */
+  cursor: pointer; /* Indicate the curtain is clickable */
+  width: 100%; /* The checkbox is as wide as the component */
+  height: 100%; /* The checkbox is as tall as the component */
+  z-index: 100; /* Make sure the checkbox is on top of everything else */
+  opacity: 0; /* Hide the checkbox */
+}
+
+/* When the checkbox is checked... */
+        
+/* Slide the first panel in */
+input[type=checkbox]:checked ~ div.curtain__panel--left {
+  transform: translateX(0);
+}
+
+/* Slide the second panel in */
+input[type=checkbox]:checked ~ div.curtain__panel--right {
+  transform: translateX(0);
+}
