@@ -28,14 +28,14 @@ body{
 }
 
 .curtain__panel--left {
-  transform: translateX(-100%);
+  transform: translateX(0%);
   background-image: url('https://i.pinimg.com/564x/21/39/51/213951e3b39281264e8b02dea7013925.jpg');
   background-size: cover; /* Adjust as needed */
 
 }
 
 .curtain__panel--right {
-  transform: translateX(100%);
+  transform: translateX(0);
   background-image: url('https://i.pinimg.com/564x/21/39/51/213951e3b39281264e8b02dea7013925.jpg');
   background-size: cover; /* Adjust as needed */
 
@@ -64,11 +64,15 @@ input[type=checkbox] {
 /* When the checkbox is checked... */
         
 /* Slide the first panel in */
-input[type=checkbox]:checked ~ div.curtain__panel--left {
-  transform: translateX(0);
+.curtain.clickable {
+  cursor: pointer;
 }
 
-/* Slide the second panel in */
-input[type=checkbox]:checked ~ div.curtain__panel--right {
-  transform: translateX(0);
+/* When the clickable class is applied... */
+.curtain.opened-curstain .curtain__panel--left {
+  transform: translateX(-100%);
+}
+
+.curtain.opened-curstain .curtain__panel--right {
+  transform: translateX(100%);
 }
