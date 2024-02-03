@@ -30,7 +30,7 @@ function goto() {
 
       wordflick();
   
-    }, 6000);
+    }, 19000);
 
   }, 3000);
 }
@@ -40,7 +40,8 @@ var words = [
   'Chờ tớ một tí',
   'Tớ còn vài điều muốn nói với cậu', 
   'Cậu đã sẵn sàng chưa', 
-  'Bây giờ mình bắt đầu nhé !!'],
+  'Bây giờ mình bắt đầu nhé !!'
+],
 
   i = 0,
   offset = 0,
