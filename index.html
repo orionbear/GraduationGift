@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- The parent component -->
+  <div class="curtain" onclick="toggleCurtain()">
+
+    <!-- The component wrapper -->
+    <div class="curtain__wrapper">
+
+      <!-- The left curtain panel -->
+      <div class="curtain__panel curtain__panel--left">
+
+      </div> <!-- curtain__panel -->
+
+      <!-- The prize behind the curtain panels -->
+      <div class="curtain__content">
+        <div class="content ">
+          <div class="letter d-none" onclick="goto()">
+            <div class="wing right"></div>
+            <div class="wing left"></div>
+            <!-- <div class="heart"></div> -->
+            <div id="envelope">
+              <h2>BẰNG TỐT NGHIỆP</h2>
+            </div>
+          </div>
+
+          <div class="word d-none"></div>
+
+          <div class="stage">
+            <img class="singer" 
+                src="assets/andree.png" 
+                alt="alternative-text"
+                onclick="play()"
+                >
+            
+            <video class="singer-song d-none">
+              <source src="./assets/andree.mp4" type="video/mp4">
+            </video>
+          </div>
+
+          <video class="domain-expand d-none">
+            <source src="./assets/bodyShaming.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div> <!-- curtain__prize -->
+
+      <!-- The right curtain panel -->
+      <div class="curtain__panel curtain__panel--right">
+      </div> <!-- curtain__panel -->
+
+    </div> <!-- curtain__wrapper -->
+
+  </div> <!-- curtain -->
+  <script src="script.js"></script>
+  <script src="script2.js"></script>
+
+
+</body>
+
+</html>
