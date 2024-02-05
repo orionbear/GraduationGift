@@ -1,3 +1,16 @@
+let songNames = [
+  "andree.mp4",
+  "rhyder.mp4",
+  "wres.mp4",
+
+]
+let singer = [
+  "andree.png",
+  "rhyder.png",
+  "wres.png",
+]
+var index = 0;
+
 function toggleCurtain() {
   const curtain = document.querySelector('.curtain');
   curtain.classList.add('opened-curstain');
@@ -23,16 +36,36 @@ function goto() {
     wordflick();
 
     setTimeout(function() {
-      word.classList.add("d-none")
-  
-      const videoElement = document.querySelector('.domain-expand');
-      videoElement.play();
-
-      wordflick();
-  
+      word.classList.add("d-none") 
+      
     }, 19000);
 
   }, 3000);
+}
+
+const videoElement = document.querySelector('.singer-song');
+const singerElement = document.querySelector('.singer');
+
+function play() {
+  videoElement.play();
+
+  if (!videoElement.paused){
+    changeVideo();
+  }
+
+  videoElement.addEventListener("ended", function() {
+    changeVideo();    
+  });
+}
+
+function changeVideo(){
+  index;
+  if(index < songNames.length){
+    videoElement.src = `./assets/${songNames[index]}`;
+    singerElement.src = `./assets/${singer[index]}`
+    videoElement.play();
+  }
+  index++;
 }
 
 var words = [

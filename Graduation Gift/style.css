@@ -402,4 +402,24 @@ input[type=checkbox] {
   font: 700 normal 2.5em 'tahoma';
   text-shadow: 5px 2px #222324, 2px 4px #222324, 3px 5px #222324;
   z-index: 1;
+  text-align: center;
+}
+
+.stage{
+  background-image: url('./assets/9ec1b04ac424e657f20cea8523fdce09.jpg');
+  width: 100%;
+  height: 100%;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+}
+.singer{
+  width: 200px;
+  height: 600px;
+  opacity: 70%;
+  line-height: 100%;
+  cursor: pointer;
 }

@@ -22,8 +22,8 @@
 
       <!-- The prize behind the curtain panels -->
       <div class="curtain__content">
-        <div class="content">
-          <div class="letter" onclick="goto()">
+        <div class="content ">
+          <div class="letter d-none" onclick="goto()">
             <div class="wing right"></div>
             <div class="wing left"></div>
             <!-- <div class="heart"></div> -->
@@ -33,6 +33,18 @@
           </div>
 
           <div class="word d-none"></div>
+
+          <div class="stage">
+            <img class="singer" 
+                src="assets/andree.png" 
+                alt="alternative-text"
+                onclick="play()"
+                >
+            
+            <video class="singer-song d-none">
+              <source src="./assets/andree.mp4" type="video/mp4">
+            </video>
+          </div>
 
           <video class="domain-expand d-none">
             <source src="./assets/bodyShaming.mp4" type="video/mp4">
