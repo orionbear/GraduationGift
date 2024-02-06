@@ -156,7 +156,7 @@ input[type=checkbox] {
 }
 
 .d-none {
-  display: none;
+  display: none !important;
 }
 
 .domain-expand {
@@ -193,7 +193,7 @@ input[type=checkbox] {
 /* right wing */
 
 .right {
-  margin-left: -60px;
+  margin-left: -160px;
   left: 50%;
   animation: flap1 1s infinite;
   border-bottom: 3px solid rgba(0, 0, 0, .08);
@@ -239,7 +239,7 @@ input[type=checkbox] {
 
 .left {
   border-radius: 12px 20px 20px 60px;
-  margin-left: -60px;
+  margin-left: 34px;
   left: 50%;
   animation: flap2 1s infinite;
   border-bottom: 3px solid rgba(0, 0, 0, .08);
@@ -335,9 +335,9 @@ input[type=checkbox] {
 
 #envelope {
   background: white;
-  height: 200px;
+  height: 300px;
   position: relative;
-  width: 320px;
+  width: 200px;
   border-radius: 8px;
   overflow: hidden;
   animation: floaty 1s infinite;
@@ -347,6 +347,7 @@ input[type=checkbox] {
   align-items: center;
   padding: 10px;
   cursor: pointer;
+  text-align: center;
 }
 
 @keyframes floaty {
@@ -420,15 +421,14 @@ input[type=checkbox] {
 }
 
 .singer{
-  width: 200px;
-  height: 600px;
+  width: 150px;
+  height: 500px;
   opacity: 70%;
   line-height: 100%;
   cursor: pointer;
   animation: cahay 0.1s linear 2s infinite alternate;
-  position: relative;
   z-index: 1;
-
+  position: relative;
 }
 
 .cadut{
@@ -457,3 +457,4 @@ input[type=checkbox] {
     opacity: 10%;
   }
 }
+
