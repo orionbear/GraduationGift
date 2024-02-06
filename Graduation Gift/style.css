@@ -407,19 +407,53 @@ input[type=checkbox] {
 
 .stage{
   background-image: url('./assets/9ec1b04ac424e657f20cea8523fdce09.jpg');
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   background-size: 100% 100%;
   background-repeat: no-repeat;
   background-position: center;
   display: flex;
   justify-content: center;
   align-items: end;
+  animation: cahay 0.1s linear 2s infinite alternate;
+
 }
+
 .singer{
   width: 200px;
   height: 600px;
   opacity: 70%;
   line-height: 100%;
   cursor: pointer;
+  animation: cahay 0.1s linear 2s infinite alternate;
+  position: relative;
+  z-index: 1;
+
+}
+
+.cadut{
+  width: 100vw;
+  height: 100vh;
+  background-color: blue;
+  animation: dutdut 0.1s linear 2s infinite alternate;
+  position: absolute;
+
+}
+
+@keyframes cahay {
+  0% {
+    top: 0px;
+  }
+  100% {
+    top: -1px;
+  }
+}
+
+@keyframes dutdut {
+  0% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 10%;
+  }
 }
