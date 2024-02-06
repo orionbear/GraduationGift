@@ -1,12 +1,16 @@
 let songNames = [
   "andree.mp4",
   "rhyder.mp4",
+  "tlinh.mp4",
+  "lilgrade.mp4",
   "wres.mp4",
 
 ]
 let singer = [
   "andree.png",
   "rhyder.png",
+  "tlinh.png",
+  "lilgrade.png",
   "wres.png",
 ]
 var index = 0;
@@ -46,7 +50,7 @@ function goto() {
         setTimeout(function() {
           window.location.reload();
         }, 3000);
-      }, 27000);
+      }, 22000);
     }
     
 
@@ -102,9 +106,9 @@ var words2 = [
   'Bằng thật thì cậu phải tự đi lấy rồi',
   'Còn cái này cậu chỉ được xem thôi',
   'Khi nào tụi mình có dịp gặp nhau thì bù lại bằng cái khác nhá',
-  'Tinh thần dẫ thấy thoải mái chưa',
+  'Tinh thần đã thấy thoải mái chưa',
   'Chuẩn bị tốt nghiệp thôi nào',
-  '<3 <3 <3 <3',
+  '<3 <3 <3 <3 <3',
 ]
 
   
